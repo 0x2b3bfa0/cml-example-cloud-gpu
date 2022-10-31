@@ -38,6 +38,7 @@ jobs:
           dvc repro
       - name: Create CML report
         run: |
+          cml ci
           git show origin/main:image.png > image-main.png
           cat <<EOF > report.md
           # Style transfer
